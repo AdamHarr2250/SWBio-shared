@@ -2,7 +2,7 @@
 
 ## Introduction to dataset and code
 
-This script ingests a csv file containing chemical information about a library of covalent fragments from the chemical supplier, Enamine, and biological antibacterial data recorded by our lab. The script processes the data and outputs distribution plots of the biological responses, dynamically and statistically determines a threshold for activity and outputs a visual grid of putative active chemical structures with unique ID and corresponding biological response data.
+This script ingests a csv file containing chemical information about a library of covalent fragments from the chemical supplier, Enamine, and biological antibacterial data recorded by our lab against methicillin-resistant Staphylococcus aureus (MRSA). The script processes the data and outputs distribution plots of the biological responses, dynamically and statistically determines a threshold for inhibitory activity that is significantly different from inactivity and outputs a visual grid of putative active chemical structures with unique ID and corresponding biological response data. All plots and figures are saved to a folder in the current working directory.
 
 The script in this repository aims to:
 
@@ -30,3 +30,10 @@ If this does not work for RDkit, please find documentation on other ways to inst
 <br>
 <br>
 3) When the script is run, it will first prompt the user to input a folder name which will be created (or found if it already exists) in the current working directory. All plots and figures will be saved to this file path. Plots and figures will also be opened as the script runs for immediate manual inspection.
+
+## Outputs
+1) reghist_plot.png: 2 by 1 grid containing a regression plot of two replicates of inhibition of methicillin-resistant MRSA growth in pane 1 and overlaid histograms of each replicate to compare distribution of biological response data.
+2) avhist_plot.png: a histogram of the distribution of the average MRSA growth inhibition calculated from the two replicate values for every fragment tested.
+3) Values are printed: mean and standard deviation of average inhibition of MRSA growth, and threshold calculated by mean + 3* stdev. Theory is included in report.
+4) hits_figure.png: a grid of fragments classed as displaying significant average inhibition values.
+5) corr_matrix: a heatmap of pearson correlation coefficient values between biolgical summary values (mean and range MRSA growth inhibition) against the chemical property values. This aims to identify if any single chemical property is predictive of biological output in the overall data and the active fragment set.
