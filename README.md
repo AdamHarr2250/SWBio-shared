@@ -15,6 +15,10 @@ The script in this repository aims to:
 
 # Instructions
 
-1) Before running the code, please ensure you have first downloaded the chemical analysis module, rdkit, by navigating to your command prompt and typing:
-   ***pip install rdkit***. If this does not work, please find documentation on other ways to install the module at this [web address](https://www.rdkit.org/docs/Install.html)
-2) 
+1) Before running the code, please ensure you have first downloaded the correct modules for working with this data:
+<br>python3 -m pip install pandas
+<br>python3 -m pip install seaborn
+<br>python3 -m pip install matplotlib
+<br>python3 -m pip install numpy
+<br>python3 -m pip install rdkit # If this does not work, please find documentation on other ways to install the module at this [web address](https://www.rdkit.org/docs/Install.html)
+3) 
