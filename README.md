@@ -2,7 +2,7 @@
 
 ## Introduction to dataset and code
 
-This script ingests a csv file containing chemical information about a library of covalent fragments from the chemical supplier, Enamine, and biological antibacterial data recorded by our lab against methicillin-resistant Staphylococcus aureus (MRSA). The script processes the data and outputs distribution plots of the biological responses, dynamically and statistically determines a threshold for inhibitory activity that is significantly different from inactivity and outputs a visual grid of putative active chemical structures with unique ID and corresponding biological response data. All plots and figures are saved to a folder in the current working directory.
+This script, 'smallmol_screen.py' ingests a csv file containing chemical information about a library of covalent fragments from the chemical supplier, Enamine, and biological antibacterial data recorded by our lab against methicillin-resistant Staphylococcus aureus (MRSA). The script processes the data and outputs distribution plots of the biological responses, dynamically and statistically determines a threshold for inhibitory activity that is significantly different from inactivity and outputs a visual grid of putative active chemical structures with unique ID and corresponding biological response data. All plots and figures are saved to a folder in the current working directory.
 
 The script in this repository aims to:
 
@@ -15,11 +15,11 @@ The script in this repository aims to:
 
 <br> 
 1) Before running the code, please ensure you have first downloaded the correct modules for working with this data. Copy and paste the following lines into your command prompt.
-<br>python3 -m pip install pandas
-<br>python3 -m pip install seaborn
-<br>python3 -m pip install matplotlib
-<br>python3 -m pip install numpy
-<br>python3 -m pip install rdkit 
+<br>python -m pip install pandas
+<br>python -m pip install seaborn
+<br>python -m pip install matplotlib
+<br>python -m pip install numpy
+<br>python -m pip install rdkit 
 If this does not work for RDkit, please find documentation on other ways to install the module at this web address: https://www.rdkit.org/docs/Install.html
 <br>
 <br>
@@ -29,7 +29,8 @@ If this does not work for RDkit, please find documentation on other ways to inst
    <br> Data: https://raw.githubusercontent.com/AdamHarr2250/SWBio-shared/refs/heads/main/SFFdata.csv (Note: The script contains a relative data reference and will directly import data from the GitHub repository without any need to manually download the data).
 <br>
 <br>
-3) When the script is run, it will first prompt the user to input a folder name which will be created (or found if it already exists) in the current working directory. All plots and figures will be saved to this file path. Plots and figures will also be opened as the script runs for immediate manual inspection.
+3) Ensure your workig directory is pointing to the same file path as where your script has been saved. This can be changed in the terminal: 'chdir("{filepath to folder containing script}")'
+4) When the script is run using 'python smallmol_screen.py', it will first prompt the user to input a folder name which will be created (or found if it already exists) in the current working directory. All plots and figures will be saved to this file path. Plots and figures will also be opened as the script runs for immediate manual inspection.
 
 ## Outputs
 1) reghist_plot.png: 2 by 1 grid containing a regression plot of two replicates of inhibition of methicillin-resistant MRSA growth in pane 1 and overlaid histograms of each replicate to compare distribution of biological response data.
